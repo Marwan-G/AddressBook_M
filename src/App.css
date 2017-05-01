@@ -4,6 +4,10 @@
   text-align: center;
   background: #0586A6;
 }
+.ContactList h2{
+  color: #888;
+  margin-botton: 10px;
+}
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;

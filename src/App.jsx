@@ -1,32 +1,36 @@
 import React, { Component } from 'react';
 import './App.css';
 import ContactList from './contactlist.jsx';
-class App extends React.Component {
+import shortid from 'shortid';
+  class App extends React.Component {
     constructor(){
       super();
-    this.state = {
+      this.state = {
         editing:'',
-        contacts: [],
+        contacts: [{country: "libya", email: 'ghabin2004@gmail.com', firstName:'Marwan',lastName:'ghabin',id:'xyz'},
+        {country: "Argentina", email: 'Messi@gmail.com', firstName:'Messi',lastName:'carlos',id:'xyz'}],
         contact:{
-        firstName:'Marwan',
-        lastName: 'Ghabin',
-        email:'',
-        country: ''
-      }
+          id: shortid.generate(),
+          firstName:'',
+          lastName: '',
+          email:'',
+          country: ''
+        }
       }
     }
-render(){
-  return(
-   <div className='App'>
-      <div className='AppHeader'>
-        <h2>Address Book</h2>
-      </div>
-      <div>
-       <ContactList  name={ this.state.firstname}/>
-     </div>
-  </div>
-  );
- }
-}
+      render(){
+        return(
+         <div className='App'>
+            <div className='AppHeader'>
+              <h2>Address Book</h2>
+            </div>
+            <div className='contacts'>
+              <ContactList contacts={this.state.contacts} contact={this.state.id}/>
+            </div>
+         </div>
+        );
+      }
+  }
+
 
 export default App;
