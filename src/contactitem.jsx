@@ -1,6 +1,11 @@
 import React from 'react';
 
- const  ContactItem = () =>
-  <h3>ContactItem</h3>
+ const  ContactItem = (props) =>{
+    return(
+      <div>
+      { props.contact.firstName }
+      </div>
+    )
+  }
 
 export default ContactItem;

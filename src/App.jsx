@@ -7,7 +7,7 @@ import shortid from 'shortid';
       super();
       this.state = {
         editing:'',
-        contacts: [{country: "libya", email: 'ghabin2004@gmail.com', firstName:'Marwan',lastName:'ghabin',id:'xyz'},
+        contacts: [{country: "libya", email: 'ghabin2004@gmail.com', firstName:'Marwan',lastName:'ghabin',id:'xyzf'},
         {country: "Argentina", email: 'Messi@gmail.com', firstName:'Messi',lastName:'carlos',id:'xyz'}],
         contact:{
           id: shortid.generate(),

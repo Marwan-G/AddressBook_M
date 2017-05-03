@@ -2,15 +2,21 @@ import React from 'react';
 import ContactItem from './contactitem.jsx';
 
 const ContactList = (props) => {
+
   return (
     <div className="ContactList">
-      <div>
-         <h2>Contacts</h2>
           <div>
-          <ContactItem />
-
+                   { !!props.contacts.length?
+                   
+                   <div>
+                    {props.contacts.map((contact) => <ContactItem key={contact.id} contact={contact} /> )}
+                   </div>
+                   :
+                   <div>
+                     <h3>empty array</h3>
+                   </div>}
           </div>
-      </div>
+
     </div>
   );
 }
